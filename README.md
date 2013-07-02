@@ -32,7 +32,7 @@ Applying this approach, code that might have looked like this:
         [self.view addSubview:self.publicView];
         // Predicate logic...
         _fetchedResultsController = [[NSFetchedResultsController alloc] init];
-        _fetchedResultsController.delegate = self.implementor;
+        _fetchedResultsController.delegate = self;
         // Perform fetch...
         for (id object in self.fetchedResultsController.fetchedObjects) {
            NSLog(@"%@", object);
