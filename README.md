@@ -1,4 +1,4 @@
 BSImplementation
 ================
 
-A programmatic replacement for Interface Builder.
+A programmatic supplement for Interface Builder.
