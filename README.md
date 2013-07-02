@@ -45,7 +45,6 @@ would then look like this:
     {
         [super viewDidLoad];
         [self.view addSubview:self.publicView];
-
         for (id object in self.fetchedResultsController.fetchedObjects) {
             NSLog(@"%@", object);
         }
