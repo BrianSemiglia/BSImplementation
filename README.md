@@ -15,9 +15,9 @@ There are many developers that prefer not to use Interface Builder and instead p
 
 However, the problem with a programmatic approach is that it bloats the code and makes the view controller configured for one implementation. My goal was to try to get the best of both of these approaches. This is what I've come up with.
 
-1. Define a protocol of ViewControllerResourceProvider that declares a set of configurable outlets (@properties).
-2. Create an NSObject called ViewControllerImplementation<ViewControllerResourceProvider> that provides all the necessary getters to instantiate objects lazily.
-3. Create a property on my view controller of id<ViewControllerResourceProvider> called implementation.
-4. Declare the ViewController as a conformer of the ﻿ViewControllerResourceProvider﻿ protocol and override the synthesis of those properties in the view controller using @dynamic.
-5. Override the forwardInvocation and methodSignatureForSelector methods of the view controller so that messages sent to it's properties are forwarded to it implementation (ViewControllerImplementation﻿).
-6. Add an custom initializer to the ﻿ViewController﻿ called ﻿initWithImplementationWithName:(NSString *)implementationName﻿ that instantiates and assigns it's implementation using NSClassFromString.
+1. Define a protocol of `ViewControllerResourceProvider` that declares a set of configurable outlets (@properties).
+2. Create an NSObject called `ViewControllerImplementation<ViewControllerResourceProvider>` that provides all the necessary getters to instantiate objects lazily.
+3. Create a property on my view controller of `id<ViewControllerResourceProvider>` called implementation.
+4. Declare the ViewController as a conformer of the `ViewControllerResourceProvider` protocol and override the synthesis of those properties in the view controller using `@dynamic`.
+5. Override the `forwardInvocation:` and `methodSignatureForSelector:` methods of the view controller so that messages sent to it's properties are forwarded to it implementation (`ViewControllerImplementation`).
+6. Add an custom initializer to the `ViewController` called `initWithImplementationWithName:(NSString *)implementationName` that instantiates and assigns it's implementation using `NSClassFromString`.
