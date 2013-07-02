@@ -13,9 +13,7 @@ There are many developers that prefer not to use Interface Builder and instead p
 4. Custom initializers: Custom initializers/properties, (i.e. initWithArgument:andArgument:) are not supported.
 5. Dynamic Objects: Configuring objects that will change based on runtime variables is difficult, i.e. calendar views.
 
-However, the problem with a programmatic approach is that it bloats the code and makes the view controller configured for one implementation.
-
-My goal was to try to get the best of both of these approaches. This is what I've come up with.
+However, the problem with a programmatic approach is that it bloats the code and makes the view controller configured for one implementation. My goal was to try to get the best of both of these approaches. This is what I've come up with.
 
 1. Define a protocol of ViewControllerResourceProvider that declares a set of configurable outlets (@properties).
 2. Create an NSObject called ViewControllerImplementation<ViewControllerResourceProvider> that provides all the necessary getters to instantiate objects lazily.
