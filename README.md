@@ -21,3 +21,32 @@ However, the problem with a programmatic approach is that it bloats the code and
 4. Declare the ViewController as a conformer of the `ViewControllerResourceProvider` protocol and override the synthesis of those properties in the view controller using `@dynamic`.
 5. Override the `forwardInvocation:` and `methodSignatureForSelector:` methods of the view controller so that messages sent to it's properties are forwarded to the `ViewControllerImplementation` instance.
 6. Add a custom initializer to the `ViewController` called `initWithImplementationWithName:(NSString *)implementationName` that instantiates and assigns it's implementation using `NSClassFromString`.
+
+Code that might have looked like this:
+    
+    - (void)viewDidLoad
+    {
+        [super viewDidLoad];
+        _publicView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 300, 300)];
+        _publicView.backgroundColor = [UIColor redColor];
+        [self.view addSubview:self.publicView];
+        // Predicate logic...
+        _fetchedResultsController = [[NSFetchedResultsController alloc] init];
+        _fetchedResultsController.delegate = self.implementor;
+        // Perform fetch...
+        for (id object in self.fetchedResultsController.fetchedObjects) {
+           NSLog(@"%@", object);
+       }
+    }
+    
+would then look like this:
+
+    - (void)viewDidLoad
+    {
+        [super viewDidLoad];
+        [self.view addSubview:self.publicView];
+
+        for (id object in self.fetchedResultsController.fetchedObjects) {
+            NSLog(@"%@", object);
+        }
+    }
