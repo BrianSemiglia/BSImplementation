@@ -22,7 +22,7 @@ However, the problem with a programmatic approach is that it bloats the code and
 5. Override the `forwardInvocation:` and `methodSignatureForSelector:` methods of the view controller so that messages sent to it's properties are forwarded to the `ViewControllerImplementation` instance.
 6. Add a custom initializer to the `ViewController` called `initWithImplementationWithName:(NSString *)implementationName` that instantiates and assigns it's implementation using `NSClassFromString`.
 
-Code that might have looked like this:
+Applying this approach, code that might have looked like this:
     
     - (void)viewDidLoad
     {
@@ -39,7 +39,7 @@ Code that might have looked like this:
        }
     }
     
-would then look like this:
+would then look more like this:
 
     - (void)viewDidLoad
     {
