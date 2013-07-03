@@ -75,3 +75,20 @@ would end up looking more like this:
     {
         return self.implementation;
     }
+    
+If you really wanted to you could put the `initWithImplementationWithName:` and `forwardingTargetForSelector:` in a super class so that your code was just:
+
+    @dynamic publicView;
+    @dynamic scrollView;
+    @dynamic fetchedResultsController;
+    @dynamic navigationButton;
+
+    - (void)viewDidLoad
+    {
+        [super viewDidLoad];
+        [self.view addSubview:self.publicView];
+        [self.view addSubview:self.navigationButton];
+        for (id object in self.fetchedResultsController.fetchedObjects) {
+            NSLog(@"%@", object);
+        }
+    }
