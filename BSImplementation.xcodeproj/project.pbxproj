@@ -17,6 +17,7 @@
 		D326D7DD178264C5001CCA3C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D326D7DC178264C5001CCA3C /* Default@2x.png */; };
 		D326D7DF178264C5001CCA3C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D326D7DE178264C5001CCA3C /* Default-568h@2x.png */; };
 		D3578AC41784E67700214C43 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D3578AC31784E67700214C43 /* README.md */; };
+		D3578AC71784EB9900214C43 /* BSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3578AC61784EB9900214C43 /* BSViewController.m */; };
 		D361E2C91782664A003D40BE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D361E2C61782664A003D40BE /* ViewController.m */; };
 		D361E2CA1782664A003D40BE /* ViewControllerImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = D361E2C81782664A003D40BE /* ViewControllerImplementation.m */; };
 		D361E2CE17826656003D40BE /* NSObject+Implementation.m in Sources */ = {isa = PBXBuildFile; fileRef = D361E2CD17826656003D40BE /* NSObject+Implementation.m */; };
@@ -38,6 +39,8 @@
 		D326D7DC178264C5001CCA3C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		D326D7DE178264C5001CCA3C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		D3578AC31784E67700214C43 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		D3578AC51784EB9900214C43 /* BSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSViewController.h; sourceTree = "<group>"; };
+		D3578AC61784EB9900214C43 /* BSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSViewController.m; sourceTree = "<group>"; };
 		D361E2C41782664A003D40BE /* ViewControllerResourceProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerResourceProvider.h; sourceTree = "<group>"; };
 		D361E2C51782664A003D40BE /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		D361E2C61782664A003D40BE /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
@@ -123,6 +126,8 @@
 			isa = PBXGroup;
 			children = (
 				D361E2CB17826656003D40BE /* BSImplementation.h */,
+				D3578AC51784EB9900214C43 /* BSViewController.h */,
+				D3578AC61784EB9900214C43 /* BSViewController.m */,
 				D361E2CC17826656003D40BE /* NSObject+Implementation.h */,
 				D361E2CD17826656003D40BE /* NSObject+Implementation.m */,
 			);
@@ -209,6 +214,7 @@
 			files = (
 				D326D7D5178264C5001CCA3C /* main.m in Sources */,
 				D326D7D9178264C5001CCA3C /* AppDelegate.m in Sources */,
+				D3578AC71784EB9900214C43 /* BSViewController.m in Sources */,
 				D361E2C91782664A003D40BE /* ViewController.m in Sources */,
 				D361E2CA1782664A003D40BE /* ViewControllerImplementation.m in Sources */,
 				D361E2CE17826656003D40BE /* NSObject+Implementation.m in Sources */,

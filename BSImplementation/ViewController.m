@@ -10,17 +10,9 @@
 #import "NSObject+Implementation.h"
 #import <CoreData/CoreData.h>
 
-@implementation ViewController
+// The compiler will warn about the missing performCustomSegue method but this can be ignored.
 
-- (id)initWithImplementationWithName:(NSString *)implementationName
-{
-    if (self = [super init]) {
-        _implementation = [UIViewController implementationWithClassName:implementationName];
-        _implementation.implementor = self;
-    }
-    
-    return self;
-}
+@implementation ViewController
 
 - (void)viewDidLoad
 {
@@ -35,17 +27,12 @@
 
 #pragma mark - Message Forwarding
 
-// Messages sent to dynamic properties will be forwarded to the implementation object(s).
+// Messages sent to dynamic properties will be forwarded to the implementation object.
 // Remove dynamic declaration to prevent getter/setter selectors from being forwarded.
 
 @dynamic publicView;
 @dynamic scrollView;
 @dynamic fetchedResultsController;
 @dynamic navigationButton;
-
-- (id)forwardingTargetForSelector:(SEL)aSelector
-{
-    return self.implementation;
-}
 
 @end
