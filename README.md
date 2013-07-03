@@ -55,3 +55,23 @@ would then look more like this:
             NSLog(@"%@", object);
         }
     }
+    
+    - (id)initWithImplementationWithName:(NSString *)implementationName
+    {
+        if (self = [super init]) {
+            _implementation = [UIViewController implementationWithClassName:implementationName];
+            _implementation.implementor = self;
+        }
+        
+        return self;
+    }
+
+    @dynamic publicView;
+    @dynamic scrollView;
+    @dynamic fetchedResultsController;
+    @dynamic navigationButton;
+
+    - (id)forwardingTargetForSelector:(SEL)aSelector
+    {
+        return self.implementation;
+    }
