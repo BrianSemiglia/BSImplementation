@@ -44,7 +44,7 @@ Applying this approach, code that might have looked like this:
        }
     }
     
-would then look more like this:
+would end up looking more like this:
 
     - (void)viewDidLoad
     {
