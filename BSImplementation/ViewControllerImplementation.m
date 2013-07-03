@@ -7,14 +7,18 @@
 //
 
 #import "ViewControllerImplementation.h"
+#import "ViewController.h"
 #import <CoreData/CoreData.h>
 
 @implementation ViewControllerImplementation
 
 // Synthesizing is necessary in making instance variables, getters and setters available.
+// Useful if you don't leave some outlets nil.
+
 @synthesize publicView = _publicView;
 @synthesize scrollView = _scrollView;
 @synthesize fetchedResultsController = _fetchedResultsController;
+@synthesize navigationButton = _navigationButton;
 
 - (UIView *)publicView
 {    
@@ -52,6 +56,27 @@
     // Possibly perform fetch...
     
     return _fetchedResultsController;
+}
+
+- (UIButton *)navigationButton
+{
+    if (_navigationButton) {
+        return _navigationButton;
+    }
+    
+    _navigationButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 50, 44)];
+    _navigationButton.titleLabel.text = @"Push";
+    _navigationButton.backgroundColor = [UIColor yellowColor];
+    [_navigationButton addTarget:self action:@selector(performCustomSegue) forControlEvents:UIControlEventTouchUpInside];
+    
+    return _navigationButton;
+}
+
+- (void)performCustomSegue
+{
+    // Implementation decides destination and transition
+    UIViewController *viewController = [[UIViewController alloc] init];
+    [self.implementor.navigationController pushViewController:viewController animated:YES];
 }
 
 @end

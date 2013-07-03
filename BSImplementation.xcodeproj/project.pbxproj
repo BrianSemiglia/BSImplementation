@@ -16,6 +16,7 @@
 		D326D7DB178264C5001CCA3C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D326D7DA178264C5001CCA3C /* Default.png */; };
 		D326D7DD178264C5001CCA3C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D326D7DC178264C5001CCA3C /* Default@2x.png */; };
 		D326D7DF178264C5001CCA3C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D326D7DE178264C5001CCA3C /* Default-568h@2x.png */; };
+		D3578AC41784E67700214C43 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D3578AC31784E67700214C43 /* README.md */; };
 		D361E2C91782664A003D40BE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D361E2C61782664A003D40BE /* ViewController.m */; };
 		D361E2CA1782664A003D40BE /* ViewControllerImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = D361E2C81782664A003D40BE /* ViewControllerImplementation.m */; };
 		D361E2CE17826656003D40BE /* NSObject+Implementation.m in Sources */ = {isa = PBXBuildFile; fileRef = D361E2CD17826656003D40BE /* NSObject+Implementation.m */; };
@@ -36,6 +37,7 @@
 		D326D7DA178264C5001CCA3C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		D326D7DC178264C5001CCA3C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		D326D7DE178264C5001CCA3C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		D3578AC31784E67700214C43 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		D361E2C41782664A003D40BE /* ViewControllerResourceProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerResourceProvider.h; sourceTree = "<group>"; };
 		D361E2C51782664A003D40BE /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		D361E2C61782664A003D40BE /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
@@ -65,7 +67,7 @@
 		D326D7BC178264C4001CCA3C = {
 			isa = PBXGroup;
 			children = (
-				D3E2D446178265D900AE9621 /* CoreData.framework */,
+				D3578AC31784E67700214C43 /* README.md */,
 				D326D7CE178264C5001CCA3C /* BSImplementation */,
 				D326D7C7178264C4001CCA3C /* Frameworks */,
 				D326D7C6178264C4001CCA3C /* Products */,
@@ -83,6 +85,7 @@
 		D326D7C7178264C4001CCA3C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D3E2D446178265D900AE9621 /* CoreData.framework */,
 				D326D7C8178264C4001CCA3C /* UIKit.framework */,
 				D326D7CA178264C5001CCA3C /* Foundation.framework */,
 				D326D7CC178264C5001CCA3C /* CoreGraphics.framework */,
@@ -191,6 +194,7 @@
 			files = (
 				D326D7D3178264C5001CCA3C /* InfoPlist.strings in Resources */,
 				D326D7DB178264C5001CCA3C /* Default.png in Resources */,
+				D3578AC41784E67700214C43 /* README.md in Resources */,
 				D326D7DD178264C5001CCA3C /* Default@2x.png in Resources */,
 				D326D7DF178264C5001CCA3C /* Default-568h@2x.png in Resources */,
 			);

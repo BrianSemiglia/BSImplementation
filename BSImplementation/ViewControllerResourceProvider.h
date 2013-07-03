@@ -14,4 +14,8 @@
 @property (nonatomic, strong) UIView *publicView;
 @property (nonatomic, strong) UIScrollView *scrollView;
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
+@property (nonatomic, strong) UIButton *navigationButton;
+
+- (void)performCustomSegue;
+
 @end

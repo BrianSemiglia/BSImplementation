@@ -26,6 +26,7 @@
 {
     [super viewDidLoad];
     [self.view addSubview:self.publicView];
+    [self.view addSubview:self.navigationButton];
 
     for (id object in self.fetchedResultsController.fetchedObjects) {
         NSLog(@"%@", object);
@@ -40,20 +41,11 @@
 @dynamic publicView;
 @dynamic scrollView;
 @dynamic fetchedResultsController;
+@dynamic navigationButton;
 
-- (void)forwardInvocation:(NSInvocation *)invocation {
-	if (!self.implementation) {
-		[self doesNotRecognizeSelector:invocation.selector];
-	}
-	[invocation invokeWithTarget:self.implementation];
-}
-
-- (NSMethodSignature*)methodSignatureForSelector:(SEL)selector {
-	NSMethodSignature *signature = [super methodSignatureForSelector:selector];
-	if (!signature) {
-		signature = [self.implementation methodSignatureForSelector:selector];
-	}
-	return signature;
+- (id)forwardingTargetForSelector:(SEL)aSelector
+{
+    return self.implementation;
 }
 
 @end
