@@ -27,12 +27,17 @@ Applying this approach, code that might have looked like this:
     - (void)viewDidLoad
     {
         [super viewDidLoad];
-        _publicView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 300, 300)];
-        _publicView.backgroundColor = [UIColor redColor];
+        self.publicView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 300, 300)];
+        self.publicView.backgroundColor = [UIColor redColor];
         [self.view addSubview:self.publicView];
+        self.navigationButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 50, 44)];
+        self.navigationButton.titleLabel.text = @"Push";
+        self.navigationButton.backgroundColor = [UIColor yellowColor];
+        [self.navigationButton addTarget:self action:@selector(performCustomSegue) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:self.navigationButton];
         // Predicate logic...
-        _fetchedResultsController = [[NSFetchedResultsController alloc] init];
-        _fetchedResultsController.delegate = self;
+        self.fetchedResultsController = [[NSFetchedResultsController alloc] init];
+        self.fetchedResultsController.delegate = self;
         // Perform fetch...
         for (id object in self.fetchedResultsController.fetchedObjects) {
            NSLog(@"%@", object);
@@ -45,6 +50,7 @@ would then look more like this:
     {
         [super viewDidLoad];
         [self.view addSubview:self.publicView];
+        [self.view addSubview:self.navigationButton];
         for (id object in self.fetchedResultsController.fetchedObjects) {
             NSLog(@"%@", object);
         }
