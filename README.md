@@ -76,7 +76,7 @@ would end up looking more like this:
         return self.implementation;
     }
     
-If you really wanted to, you could put the `initWithImplementationWithName:` and `forwardingTargetForSelector:` in a super class so that your code was just this:
+If you really wanted to, you could put the `initWithImplementationWithName:` and `forwardingTargetForSelector:` methods in a super class so that your code was just this:
 
     @dynamic publicView;
     @dynamic scrollView;
