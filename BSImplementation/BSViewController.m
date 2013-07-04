@@ -17,7 +17,7 @@
 - (id)initWithImplementationWithName:(NSString *)implementationName
 {
     if (self = [super init]) {
-        _implementation = [UIViewController implementationWithClassName:implementationName];
+        _implementation = [NSObject implementationWithClassName:implementationName];
         _implementation.implementor = self;
     }
     
