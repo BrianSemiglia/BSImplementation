@@ -24,8 +24,7 @@ However, the problem with a programmatic approach is that it bloats the code and
 
 Applying this approach, code that might have looked like this:
     
-    - (void)viewDidLoad
-    {
+    - (void)viewDidLoad {
         [super viewDidLoad];
         self.publicView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 300, 300)];
         self.publicView.backgroundColor = [UIColor redColor];
@@ -46,8 +45,7 @@ Applying this approach, code that might have looked like this:
     
 would end up looking more like this:
 
-    - (void)viewDidLoad
-    {
+    - (void)viewDidLoad {
         [super viewDidLoad];
         [self.view addSubview:self.publicView];
         [self.view addSubview:self.navigationButton];
@@ -56,8 +54,7 @@ would end up looking more like this:
         }
     }
     
-    - (id)initWithImplementationWithName:(NSString *)implementationName
-    {
+    - (id)initWithImplementationWithName:(NSString *)implementationName {
         if (self = [super init]) {
             _implementation = [UIViewController implementationWithClassName:implementationName];
             _implementation.implementor = self;
@@ -71,8 +68,7 @@ would end up looking more like this:
     @dynamic fetchedResultsController;
     @dynamic navigationButton;
 
-    - (id)forwardingTargetForSelector:(SEL)aSelector
-    {
+    - (id)forwardingTargetForSelector:(SEL)aSelector {
         return self.implementation;
     }
     
@@ -83,8 +79,7 @@ If you really wanted to, you could subclass `BSViewController`, which includes t
     @dynamic fetchedResultsController;
     @dynamic navigationButton;
 
-    - (void)viewDidLoad
-    {
+    - (void)viewDidLoad {
         [super viewDidLoad];
         [self.view addSubview:self.publicView];
         [self.view addSubview:self.navigationButton];
